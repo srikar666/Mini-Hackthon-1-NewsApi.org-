@@ -1,0 +1,345 @@
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+/* Search Box and Button */
+.searchBox {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 89px;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  width: 267px;
+  height: 60px;
+  flex-shrink: 0;
+  border: 1px solid var(--Dark, #3c3030);
+  opacity: 0.3;
+  color: var(--Dark, #3c3030);
+}
+
+input::placeholder {
+  color: var(--Dark, #3c3030);
+  font-family: "Iowan Old Style";
+  font-size: 20px;
+  font-style: normal;
+  line-height: 140%; /* 28px */
+  opacity: 1;
+  font-weight: bold;
+}
+
+.inputField {
+  height: 58px;
+  font-family: "Iowan Old Style";
+  font-size: 20px;
+  width: 225px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  opacity: 0.61;
+  border: none;
+}
+
+.searchIcon {
+  height: 32px;
+  width: 32px;
+  margin: 0px 5px;
+}
+.searchBtn {
+  display: inline-flex;
+  padding: 17px 13px 16px 22px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 60px;
+  color: var(--light, #fdfdfa);
+  font-family: "Iowan Old Style";
+  font-size: 20px;
+  font-style: normal;
+  border-radius: 1px;
+  border: 1px solid #e84848;
+  background: #e84848;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+}
+
+.btn-text {
+  color: var(--light, #fdfdfa);
+  font-family: "Iowan Old Style";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+}
+
+/* News Content */
+.newsContentContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 50px; /* Increased padding on both sides */
+}
+
+.newsContentBox {
+  min-height: 1200px; /* Reduced height */
+  max-width: 1400px; /* Reduced max-width */
+  padding: 0 20px; /* Added padding inside the container */
+}
+
+.newsContent {
+  width: 320px; /* Reduced width */
+  height: 550px; /* Reduced height */
+  margin: 0 40px; /* Added margin for spacing between cards */
+}
+
+.newsGridContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.newsRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Reduced bottom margin */
+  flex-wrap: wrap;
+}
+
+.newsContent > img {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 180px; /* Limit maximum height */
+}
+
+.newsContent > .newsTilte {
+  font-size: 24px; /* Reduced font size */
+  margin-top: 12px; /* Reduced top margin */
+}
+
+.newsContent > .newsLine {
+  font-size: 18px; /* Reduced font size */
+  margin-top: 12px; /* Reduced top margin */
+}
+
+.newsContent > .newsRef {
+  font-size: 18px; /* Reduced font size */
+  margin-top: 12px; /* Reduced top margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .newsContent {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .newsContentContainer {
+    padding: 0 10px;
+  }
+  
+  .newsRow {
+    margin: 10px -5px;
+  }
+  
+  .newsContent {
+    width: calc(100% - 10px);
+    margin: 0 5px 30px;
+  }
+  
+  .newsContent > .newsTilte {
+    font-size: 20px;
+  }
+  
+  .newsContent > .newsLine,
+  .newsContent > .newsRef {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsContentContainer,
+  .newsContentBox,
+  .newsGridContainer,
+  .newsRow {
+    width: 100%;
+  }
+  
+  .newsContent {
+    width: 100%;
+    margin: 0 0 30px;
+  }
+  
+  .newsContent > img {
+    max-height: 180px;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin-top: 32px;
+}
+
+.headerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 47px;
+}
+.ellipse {
+  width: 60.291px;
+  height: 60.291px;
+}
+.heading {
+  color: var(--Dark, #3c3030);
+  font-family: "Iowan Old Style";
+  font-size: 84px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.hr-line {
+  background: #3c3030;
+  height: 1px;
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .headerBox {
+    margin-bottom: 16px;
+  }
+
+  .ellipse {
+    width: 30px;
+    height: 30px;
+  }
+
+  .heading {
+    font-size: 36px;
+    text-align: center;
+    line-height: 120%;
+  }
+
+  .hr-line {
+    width: 100%;
+  }
+}
+.FooterBox {
+  padding-top: 59px;
+  padding-bottom: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContent-1 {
+  color: var(--Dark, #3c3030);
+  font-family: "Iowan Old Style";
+  font-size: 15.095px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 21.133px */
+}
+.footer-ellipse {
+  width: 8.302px;
+  height: 8.302px;
+}
+
+.footerPart-1 {
+  display: flex;
+}
+.footerContent-2 {
+  color: var(--Dark, #3c3030);
+  font-family: "Iowan Old Style";
+  font-size: 15.095px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 21.133px */
+}
+.footerContent-3 {
+  padding-left: 8px;
+  color: var(--Dark, #3c3030);
+  font-family: "Inria Serif";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .FooterBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .footerPart-2 {
+    text-align: center;
+    width: 160px;
+  }
+
+  footer {
+    margin-bottom: 100px;
+  }
+}
+
+/* Responsive adjustments 
+@media (max-width: 1200px) {
+  .newsContent {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .newsContentContainer {
+    padding: 0 10px;
+  }
+  
+  .newsRow {
+    margin: 10px -5px;
+  }
+  
+  .newsContent {
+    width: calc(100% - 10px);
+    margin: 0 5px 30px;
+  }
+  
+  .newsContent > .newsTilte {
+    font-size: 20px;
+  }
+  
+  .newsContent > .newsLine,
+  .newsContent > .newsRef {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsContentContainer,
+  .newsContentBox,
+  .newsGridContainer,
+  .newsRow {
+    width: 100%;
+  }
+  
+  .newsContent {
+    width: 100%;
+    margin: 0 0 30px;
+  }
+  
+  .newsContent > img {
+    max-height: 180px;
+  }
+}*/
